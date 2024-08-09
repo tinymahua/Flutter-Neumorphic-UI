@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class ContainerWidgetPage extends StatefulWidget {
-  ContainerWidgetPage({Key key}) : super(key: key);
+  ContainerWidgetPage({super.key});
 
   @override
   createState() => _WidgetPageState();

@@ -8,7 +8,7 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'dart:math' show Random;
 
 class IndicatorWidgetPage extends StatefulWidget {
-  IndicatorWidgetPage({Key key}) : super(key: key);
+  IndicatorWidgetPage({super.key});
 
   @override
   createState() => _WidgetPageState();
@@ -102,7 +102,7 @@ NeumorphicIndicator(
             percent: percent,
           ),
           SizedBox(width: 12),
-          FlatButton(
+          TextButton(
               child: Text('Update'),
               onPressed: () {
                 setState(() {
@@ -298,7 +298,7 @@ NeumorphicIndicator(
             duration: Duration(seconds: 1),
           ),
           SizedBox(width: 12),
-          FlatButton(
+          TextButton(
               child: Text('Update'),
               onPressed: () {
                 setState(() {
@@ -356,7 +356,7 @@ NeumorphicIndicator(
               percent: percent,
               curve: Curves.bounceOut),
           SizedBox(width: 12),
-          FlatButton(
+          TextButton(
               child: Text('Update'),
               onPressed: () {
                 setState(() {

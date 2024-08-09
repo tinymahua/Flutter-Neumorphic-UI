@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 }
 
 class FullSampleHomePage extends StatelessWidget {
-  Widget _buildButton({String text, VoidCallback onClick}) {
+  Widget _buildButton({String? text, VoidCallback? onClick}) {
     return NeumorphicButton(
       margin: EdgeInsets.only(bottom: 12),
       padding: EdgeInsets.symmetric(
@@ -41,7 +41,7 @@ class FullSampleHomePage extends StatelessWidget {
         //),
         shape: NeumorphicShape.flat,
       ),
-      child: Center(child: Text(text)),
+      child: Center(child: Text(text!)),
       onPressed: onClick,
     );
   }
