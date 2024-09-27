@@ -58,15 +58,11 @@ class MyHomePage extends StatelessWidget {
             NeumorphicButton(
                 margin: EdgeInsets.only(top: 12),
                 onPressed: () {
-                  NeumorphicTheme.of(context)!.themeMode =
-                      NeumorphicTheme.isUsingDark(context)
-                          ? ThemeMode.light
-                          : ThemeMode.dark;
+                  NeumorphicTheme.of(context)!.themeMode = NeumorphicTheme.isUsingDark(context) ? ThemeMode.light : ThemeMode.dark;
                 },
                 style: NeumorphicStyle(
                   shape: NeumorphicShape.flat,
-                  boxShape:
-                      NeumorphicBoxShape.roundRect(BorderRadius.circular(8)),
+                  boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(8)),
                 ),
                 padding: const EdgeInsets.all(12.0),
                 child: Text(
@@ -76,15 +72,13 @@ class MyHomePage extends StatelessWidget {
             NeumorphicButton(
                 margin: EdgeInsets.only(top: 12),
                 onPressed: () {
-                  Navigator.of(context)
-                      .pushReplacement(MaterialPageRoute(builder: (context) {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                     return FullSampleHomePage();
                   }));
                 },
                 style: NeumorphicStyle(
                   shape: NeumorphicShape.flat,
-                  boxShape:
-                      NeumorphicBoxShape.roundRect(BorderRadius.circular(8)),
+                  boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(8)),
                   //border: NeumorphicBorder()
                 ),
                 padding: const EdgeInsets.all(12.0),

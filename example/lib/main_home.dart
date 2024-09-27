@@ -1,6 +1,5 @@
 import 'package:example/tips/tips_home.dart';
 import 'package:example/widgets/widgets_home.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 import 'accessibility/neumorphic_accessibility.dart';
@@ -64,8 +63,7 @@ class FullSampleHomePage extends StatelessWidget {
                   _buildButton(
                     text: "Neumorphic Playground",
                     onClick: () {
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                         return NeumorphicPlayground();
                       }));
                     },
@@ -74,8 +72,7 @@ class FullSampleHomePage extends StatelessWidget {
                   _buildButton(
                     text: "Text Playground",
                     onClick: () {
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                         return NeumorphicTextPlayground();
                       }));
                     },
@@ -84,8 +81,7 @@ class FullSampleHomePage extends StatelessWidget {
                   _buildButton(
                       text: "Samples",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                           return SamplesHome();
                         }));
                       }),
@@ -93,8 +89,7 @@ class FullSampleHomePage extends StatelessWidget {
                   _buildButton(
                       text: "Widgets",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                           return WidgetsHome();
                         }));
                       }),
@@ -102,8 +97,7 @@ class FullSampleHomePage extends StatelessWidget {
                   _buildButton(
                       text: "Tips",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                           return TipsHome();
                         }));
                       }),
@@ -111,12 +105,16 @@ class FullSampleHomePage extends StatelessWidget {
                   _buildButton(
                       text: "Accessibility",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                           return NeumorphicAccessibility();
                         }));
                       }),
                   SizedBox(height: 12),
+                  _buildButton(
+                      text: "Back Home",
+                      onClick: () {
+                        Navigator.of(context).pop();
+                      })
                 ],
               ),
             ),
