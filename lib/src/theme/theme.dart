@@ -19,12 +19,15 @@ export '../shape.dart';
 const double _defaultDepth = 4;
 const double _defaultIntensity = 0.7;
 const Color _defaultAccent = NeumorphicColors.accent;
+const Color _defaultSecondAccent = Colors.black26;
 const Color _defaultVariant = NeumorphicColors.variant;
 const Color _defaultDisabledColor = NeumorphicColors.disabled;
 const Color _defaultTextColor = NeumorphicColors.defaultTextColor;
 const LightSource _defaultLightSource = LightSource.topLeft;
 const Color _defaultBaseColor = NeumorphicColors.background;
 const double _defaultBorderSize = 0.3;
+
+const Color _defaultDarkSecondAccent = Colors.white70;
 
 /// Used with the NeumorphicTheme
 ///
@@ -45,9 +48,12 @@ const double _defaultBorderSize = 0.3;
 @immutable
 class NeumorphicThemeData {
   final Color baseColor;
+  final Color secondBaseColor;
   final Color accentColor;
+  final Color secondAccentColor;
   final Color variantColor;
   final Color disabledColor;
+
 
   final Color shadowLightColor;
   final Color shadowDarkColor;
@@ -76,6 +82,7 @@ class NeumorphicThemeData {
   final IconThemeData iconTheme;
   final NeumorphicAppBarThemeData appBarTheme;
 
+
   /// Get this theme's depth, clamp to min/max neumorphic constants
   double get depth => _depth.clamp(Neumorphic.MIN_DEPTH, Neumorphic.MAX_DEPTH);
 
@@ -85,10 +92,12 @@ class NeumorphicThemeData {
 
   const NeumorphicThemeData({
     this.baseColor = _defaultBaseColor,
+    this.secondBaseColor = Colors.white70,
     double depth = _defaultDepth,
     NeumorphicBoxShape? boxShape,
     double intensity = _defaultIntensity,
     this.accentColor = _defaultAccent,
+    this.secondAccentColor = _defaultSecondAccent,
     this.variantColor = _defaultVariant,
     this.disabledColor = _defaultDisabledColor,
     this.shadowLightColor = NeumorphicColors.decorationMaxWhiteColor,
@@ -110,10 +119,12 @@ class NeumorphicThemeData {
 
   const NeumorphicThemeData.dark({
     this.baseColor = NeumorphicColors.darkBackground,
+    this.secondBaseColor = Colors.black54,
     double depth = _defaultDepth,
     NeumorphicBoxShape? boxShape,
     double intensity = _defaultIntensity,
     this.accentColor = _defaultAccent,
+    this.secondAccentColor = _defaultDarkSecondAccent,
     this.textTheme = const TextTheme(),
     this.buttonStyle,
     this.iconTheme = const IconThemeData(),
