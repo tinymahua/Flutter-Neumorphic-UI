@@ -71,13 +71,22 @@ class _ContainersListPageState extends State<WidgetsSample> {
         SizedBox(width: 4),
         NeumorphicButton(
           style: NeumorphicStyle(
+            color: Color(0x44F7F7F7),
+            depth: -8,
             shape: NeumorphicShape.flat,
+            surfaceIntensity: 0.5,
+            intensity: 1,
+            lightSource: LightSource.bottomRight,
             boxShape: NeumorphicBoxShape.stadium(),
           ),
           padding: EdgeInsets.symmetric(vertical: 8, horizontal: 18),
-          child: Text(
-            "button 1",
-            style: TextStyle(color: _textColor()),
+          child: Container(
+            alignment: Alignment.center,
+            width: 51, height: 36,
+            child: Text(
+              "button",
+              style: TextStyle(color: _textColor()),
+            ),
           ),
           onPressed: () {
             setState(() {

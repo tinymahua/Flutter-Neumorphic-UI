@@ -321,11 +321,11 @@ class __PageState extends State<_Page> {
         setState(() {});
       },
       style: NeumorphicStyle(
-        boxShape: boxShape,
-        border: NeumorphicBorder(
-            isEnabled: true, width: this.borderWidth, color: this.borderColor),
-        shape: this.shape,
-        intensity: this.intensity,
+        boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(50)),
+        // border: NeumorphicBorder(
+        //     isEnabled: true, width: this.borderWidth, color: this.borderColor),
+        shape: NeumorphicShape.flat,
+        intensity: 0.85,
         /*
         shadowLightColor: Colors.red,
         shadowDarkColor: Colors.blue,
@@ -337,11 +337,11 @@ class __PageState extends State<_Page> {
         lightSource: this.lightSource,
       ),
       child: SizedBox(
-        height: height,
-        width: width,
+        height: 36*2,
+        width: 51*2,
         child: Container(
           //color: Colors.blue,
-          child: Center(child: Text("")),
+          child: Center(child: Text("一")),
         ),
       ),
     );

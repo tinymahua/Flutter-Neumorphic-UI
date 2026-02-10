@@ -31,6 +31,7 @@ class FullSampleHomePage extends StatelessWidget {
         horizontal: 24,
       ),
       style: NeumorphicStyle(
+        color: NeumorphicColors.background,
         boxShape: NeumorphicBoxShape.roundRect(
           BorderRadius.circular(12),
         ),
@@ -40,7 +41,7 @@ class FullSampleHomePage extends StatelessWidget {
         //),
         shape: NeumorphicShape.flat,
       ),
-      child: Center(child: Text(text!)),
+      child: Center(child: Text(text!,)),
       onPressed: onClick,
     );
   }
